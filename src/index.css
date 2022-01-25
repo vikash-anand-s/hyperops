@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  margin: 0% 5% 2% 5%; 
+  height: 20%;
+  width: 20%;
+  border-radius: 20px;
+  border: 10px solid rgb(0, 0, 0);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+
+.submitButton {
+  clear: left;
+  
+  appearance: none;
+  outline: 0;
+  background-color: white;
+
+  float:right;
+  margin: 50px;
+  margin-right: 80px;
+  padding: 10px 15px;
+  color: black;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.date-buttons{
+  padding-top: 0px;
+  padding: 20px;
+  margin: 30px;
+  float: left;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+::placeholder{
+  color: rgba(255, 255, 255, 0.544);
+}
+
+.time-buttons{
+  padding-top: 0px;
+  padding: 20px;
+  margin: 30px;
+  margin-top: 0px;
+  clear: left;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: 300;
+  background: #50a3a2;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: black;
+  border: 0;
+  margin: 8px;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 18px;
+  float: left;
+}
+
+button:hover {
+  border-style: solid;
+  color: black;
+  background-color: white;
+}
+
+hr{
+  clear:left;
+  margin: 0px 50px 0px 50px;
+}
+
+.submitButton:hover {
+  border-style: solid;
+  color: white;
+  background-color: black;
+}
+
+button:disabled{
+  background-color: rgba(255, 255, 255, 0.188);
+  color: rgba(0, 0, 0, 0.342);
+}
+button[disabled]:hover {
+  background-color: rgba(255, 255, 255, 0.188);
+  color: rgba(0, 0, 0, 0.342);
+}
+
+.nextButtondiv{
+  align-content: right;
+}
+
+
+header {
+  background-color: black;
+  margin: auto -16px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.mouse-down{
+  -webkit-box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.52);
+  -moz-box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.52);
+  box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.52);                 
+} 
+
