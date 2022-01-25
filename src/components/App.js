@@ -11,11 +11,12 @@ import Authenticate from "./Authenticate";
 function App(){
     return(<div>
         <Header />
-        <Routes path="/">
+        <Routes>
             <Route path="/" element={<Authenticate />} />
             <Route path="/Booking" element={<Booking />} />
             <Route path="/Seats" element={<FinalScreen />} />
             <Route path="/Ticket" element={<DisplayTicket />} />
+            <Route path="*" element={<Authenticate />} />
         </Routes>
     </div>);
 }
