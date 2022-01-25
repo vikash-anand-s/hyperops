@@ -4,12 +4,12 @@ h1 {
   font-weight: bold;
 }
 
-img {
+.qr {
   margin: 0% 5% 2% 5%; 
   height: 20%;
   width: 20%;
   border-radius: 20px;
-  border: 10px solid rgb(0, 0, 0);
+  border: 5px solid rgb(0, 0, 0);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -36,6 +36,7 @@ img {
   padding-top: 0px;
   padding: 20px;
   margin: 30px;
+  margin-top: 0px;
   float: left;
 }
 
@@ -89,7 +90,12 @@ button {
   border-radius: 5px;
   width: 250px;
   font-size: 18px;
-  float: left;
+}
+
+.container {
+  margin: 10% auto;
+  padding: 0px 0;
+  text-align: center;
 }
 
 button:hover {
@@ -107,6 +113,7 @@ hr{
   border-style: solid;
   color: white;
   background-color: black;
+  float:right;
 }
 
 button:disabled{

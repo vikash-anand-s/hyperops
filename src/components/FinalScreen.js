@@ -5,7 +5,7 @@ import { bookTicket, getNoFilled } from "../firebaseFunctions";
 import { Link } from "react-router-dom";
 import DateNtime from "./DateNtime";
 
-const noOfSeats = 25;
+const noOfSeats = 28;
 
 //Final Screen
 function FinalScreen(){
@@ -20,7 +20,7 @@ function FinalScreen(){
         var number = document.getElementById("ticketNumber").value;
         var totalTickets = parseInt(number) + parseInt(ticketsBooked);
         var lastString = details.time.slice(-2, );
-        if(totalTickets > noOfSeats){
+        if(Math.floor(totalTickets / noOfSeats) %2 != 0){
             switch(lastString){
                 case "00":
                 case "30":
@@ -29,12 +29,10 @@ function FinalScreen(){
                     
                     getNoFilled((message1) => {
                         
-                        if(parseInt(message1) + parseInt(number) < noOfSeats){
+                        if(Math.floor(parseInt(message1) + parseInt(number) < noOfSeats) % 2 == 0){
                             details.time = newMin;
-                            console.log("Hey " + details.time);
                         }
                         for(var i = 0; i < number; i++){
-                            console.log("OP:" + details.time);
                             bookTicket(details);
                         }
                     }, {date : details.date, time : newMin});
@@ -42,9 +40,9 @@ function FinalScreen(){
                 case "15":
                 case "45":
                     //Check in the prev slot 
-                    var newMin = (parseInt(lastString) - 15);
+                    var newMin = details.time.slice(0,2) + (parseInt(lastString) - 15);
                     getNoFilled((message) => {
-                        if(parseInt(message) + parseInt(number) < noOfSeats){
+                        if(Math.floor(parseInt(message) + parseInt(number) < noOfSeats) % 2 == 0){
                             details.time = details.time.slice(0,2) + newMin;
                         }
                         for(var i = 0; i < number; i++){
@@ -62,11 +60,18 @@ function FinalScreen(){
         }
        
     }
-    return (<div>
-        <DateNtime />
-        <h2>No of tickets filled: {ticketsBooked}</h2>
+    return (<div className="container" style={{marginTop:"0px"}}>
+        <div>
+            <div>
+                <DateNtime />
+                <h2>No of tickets filled: {ticketsBooked}</h2>
+            </div>
+        </div>
+        <hr />
+        <br />
+        <br />
         <input id="ticketNumber" placeholder="Enter Number of tickets"/>
-        <div><Link to='/Ticket'><button style={{float:"right", marginTop:"50px", marginRight:"200px"}} onClick={bookTickets}>BOOK TICKET(S)</button></Link></div>
+        <div><Link to='/Ticket'><button onClick={bookTickets}>BOOK TICKET(S)</button></Link></div>
     </div>);
 }
 

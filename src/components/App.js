@@ -8,6 +8,7 @@ import Home from "./Home";
 import DisplayTicket from "./DisplayTicket";
 import Authenticate from "./Authenticate";
 
+
 function App(){
     return(<div>
         <Header />
@@ -18,6 +19,10 @@ function App(){
             <Route path="/Ticket" element={<DisplayTicket />} />
             <Route path="*" element={<Authenticate />} />
         </Routes>
+        <br /><br />
+        <div className="container" style={{marginBottom: "20px"}}>
+            <footer><p>©SHARMADA x VIKASH</p></footer>
+        </div>
     </div>);
 }
 

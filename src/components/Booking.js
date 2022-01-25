@@ -31,6 +31,7 @@ function Booking(){
     }
 
     return <div className="body">
+        <h1 style={{marginLeft:"50px", color:"black"}}>BOOK TICKETS:</h1>
         <div className="date-buttons">
             <h2>DATE</h2>
             <button id="1" name = {nextDate(1, '')} onClick={onClickButtonDate} value={nextDate(1)}>{nextDate(1)}</button>

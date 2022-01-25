@@ -2,7 +2,7 @@ import React from "react";
 
 function TimingButton(props){
     return (<div>
-        <button onClick={props.onClick} value={props.value}>{props.text}</button>
+        <button style={{float:"left"}} onClick={props.onClick} value={props.value}>{props.text}</button>
     </div>);
 }
 
